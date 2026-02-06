@@ -1,0 +1,51 @@
+    Blocking waiting for file lock on build directory
+   0.313543708s  INFO prepare_target{force=false package_id=Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine) target="Valentine"}: cargo::core::compiler::fingerprint: fingerprint error for Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine)/Check { test: false }/TargetInner { name: "Valentine", doc: true, ..: with_path("/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine/src/main.rs", Edition2021) }
+   0.313561792s  INFO prepare_target{force=false package_id=Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine) target="Valentine"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine/target/debug/.fingerprint/Valentine-fcf19c6c36811e1c/bin-Valentine`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+   0.317038125s  INFO prepare_target{force=false package_id=Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine) target="Valentine"}: cargo::core::compiler::fingerprint: fingerprint error for Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine)/Check { test: true }/TargetInner { name: "Valentine", doc: true, ..: with_path("/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine/src/main.rs", Edition2021) }
+   0.317046208s  INFO prepare_target{force=false package_id=Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine) target="Valentine"}: cargo::core::compiler::fingerprint:     err: failed to read `/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine/target/debug/.fingerprint/Valentine-a8550c34059415f2/test-bin-Valentine`
+
+Caused by:
+    No such file or directory (os error 2)
+
+Stack backtrace:
+   0: std::backtrace::Backtrace::create
+   1: cargo_util::paths::read_bytes
+   2: cargo_util::paths::read
+   3: cargo::core::compiler::fingerprint::_compare_old_fingerprint
+   4: cargo::core::compiler::fingerprint::prepare_target
+   5: cargo::core::compiler::compile
+   6: <cargo::core::compiler::build_runner::BuildRunner>::compile
+   7: cargo::ops::cargo_compile::compile_ws
+   8: cargo::ops::cargo_compile::compile_with_exec
+   9: cargo::ops::cargo_compile::compile
+  10: cargo::commands::check::exec
+  11: <cargo::cli::Exec>::exec
+  12: cargo::main
+  13: std::sys::backtrace::__rust_begin_short_backtrace::<fn(), ()>
+  14: std::rt::lang_start::<()>::{closure#0}
+  15: std::rt::lang_start_internal
+  16: _main
+    Checking Valentine v0.1.0 (/Users/jaskaranshekhon/Dev/Rust/VALentine/Valentine)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.41s

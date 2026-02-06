@@ -1,0 +1,8 @@
+[package]
+name = "Valentine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossterm = "0.27"
+windows-sys = { version = "0.59", features = ["Win32_System_Console", "Win32_UI_WindowsAndMessaging"] }
